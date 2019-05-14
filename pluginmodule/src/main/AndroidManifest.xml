@@ -11,7 +11,8 @@
             android:theme="@style/AppTheme">
         <activity android:name=".Main2Activity">
         </activity>
-        <activity android:name=".MainActivity">
+        <!--因为启动插件activity,实际启动的代理activity,所以所有的插件activity的launchMode肯定都是不会生效的,应该可以通过自己实现activitystack来自己控制-->
+        <activity android:name=".MainActivity" android:launchMode="singleInstance">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 

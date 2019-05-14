@@ -28,6 +28,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         btn_go.setOnClickListener {
+            //所有插件activity的启动都要通过代理activity启动
             val intent = Intent(this, ProxyActivity::class.java)
             intent.putExtra("className","com.longforus.pluginmodule.MainActivity")
             startActivity(intent)

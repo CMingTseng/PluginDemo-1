@@ -4,23 +4,26 @@ import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 
-interface IPlugin{
-    fun onAttach(proxyActivity:Activity)
+/**
+ * 实现生命周期的传递
+ */
+interface IPlugin {
+    fun onAttach(proxyActivity: Activity)
 
     fun onCreate(savedInstanceState: Bundle?)
 
 
     fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?)
 
-     fun onStart()
+    fun onStart()
 
-     fun onRestart()
+    fun onRestart()
 
-     fun onResume()
+    fun onResume()
 
-     fun onPause()
+    fun onPause()
 
-     fun onStop()
+    fun onStop()
 
-     fun onDestroy()
+    fun onDestroy()
 }
